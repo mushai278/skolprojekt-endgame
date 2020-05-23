@@ -1,0 +1,500 @@
+/**mobile display**/
+/**css-navbar**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: white;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.navbar-toggle img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+.menu-icon {
+  width: 30px;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  z-index: 7;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: "sofia";
+  padding: 10px 20px;
+}
+.nav-bar li a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "sofia";
+  padding: 10px 20px;
+}
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+.active {
+  display: block;
+}
+.navbar li a:hover,
+.logo:hover {
+  background-color: #bdf0c3;
+  opacity: 0.5;
+  color: black;
+  border-radius: 5px;
+}
+header {
+  padding: 50px;
+}
+h1 {
+  text-align: center;
+  font-family: "Sofia";
+  font-size: 22px;
+  border: solid rgb(236, 14, 51);
+  border-radius: 50% 50%;
+  color: white;
+  margin-top: 30px;
+}
+.slideshow {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.content {
+  margin: auto;
+  margin-top: 50px;
+  width: 190px;
+  perspective: 1000px;
+  position: relative;
+}
+.content-carrousel {
+  width: 100%;
+  position: absolute;
+  float: right;
+  animation: animate 15s infinite linear;
+  transform-style: preserve-3d;
+}
+.content-carrousel:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.content-carrousel figure {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #4d4444;
+  overflow: hidden;
+  position: absolute;
+}
+.content-carrousel figure:nth-child(1) {
+  transform: rotateY(0deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(2) {
+  transform: rotateY(40deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(3) {
+  transform: rotateY(80deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(4) {
+  transform: rotateY(120deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(5) {
+  transform: rotateY(160deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(6) {
+  transform: rotateY(200deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(7) {
+  transform: rotateY(240deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(8) {
+  transform: rotateY(280deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(9) {
+  transform: rotateY(320deg) translateZ(300px);
+}
+.shadow {
+  position: absolute;
+  box-shadow: 0 0 20px 0 #000;
+  border-radius: 10px;
+}
+.content-carrousel img {
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%;
+}
+.content-carrousel img:hover {
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+@keyframes animate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/**background image for header and navbar**/
+main {
+  background-image: url(img/stadium1-370x222-90.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  font-size: 14px;
+  color: #000;
+}
+/**taxt about the website and football**/
+.text-background {
+  background-image: url(img/footballlegends-370x259-90.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  width: 100%;
+  height: 115vh;
+  margin-top: -180px;
+}
+header p {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-left: -50px;
+  color: white;
+  margin-top: 345px;
+  font-size: 10px;
+  z-index: 3;
+  mix-blend-mode: screen;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+header p::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.75s;
+  background: linear-gradient(to bottom, transparent 20%, #000 40%);
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 100%;
+}
+header p:hover::before {
+  background-size: 0% 100%;
+  background-color: #ff000096;
+  z-index: -2;
+  opacity: 2;
+}
+
+/**image swiper with images of football legends**/
+.swiper-container {
+  display: block;
+  margin-top: -110px;
+  width: 100%;
+  padding-top: 130px;
+  padding-bottom: 50px;
+  border-bottom: solid 20px #46a551;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 380px;
+}
+.swiper-slide .imgBx {
+  display: block;
+  border-radius: 15px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.swiper-slide .imgBx img {
+  width: 100%;
+}
+.swiper-slide .details {
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 20px;
+}
+.swiper-slide .details h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+}
+.swiper-slide .details h3 span {
+  font-size: 16px;
+  color: #f44336;
+}
+/**bio cards**/
+.flip-card {
+  margin-top: 50px;
+  border-radius: 20px;
+  background-color: transparent;
+  width: 300px;
+  height: 500px;
+  perspective: 1000px;
+  margin: 20px;
+}
+.flip-card-front img {
+  display: block;
+  border-radius: 20px;
+  width: 300px;
+  height: 500px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  border-radius: 20px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  display: block;
+  border-radius: 20px;
+}
+
+.flip-card-back {
+  display: block;
+  border-radius: 20px;
+  background-color: #2980b9;
+  height: 500px;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back p {
+  font-size: 15px;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  justify-self: center;
+  grid-template-areas:
+    "messi"
+    "lew"
+    "mbappe"
+    "msalah"
+    "neymar"
+    "cronaldo"
+    "rues"
+    "mane";
+}
+#messi {
+  grid-area: messi;
+}
+#lew {
+  grid-area: lew;
+}
+#mbappe {
+  grid-area: mbappe;
+}
+#msalah {
+  grid-area: msalah;
+}
+#neymar {
+  grid-area: neymar;
+}
+#cronaldo {
+  grid-area: cronaldo;
+}
+
+#rues {
+  grid-area: rues;
+}
+#mane {
+  grid-area: mane;
+}
+/**footer info**/
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "tel" "epost" "address" "about";
+  text-align: center;
+  background: #46a551;
+  gap: 10px;
+  border-radius: 10px;
+  height: 100%;
+}
+#tel {
+  grid-area: tel;
+}
+#epost {
+  grid-area: epost;
+}
+#address {
+  grid-area: address;
+}
+#about {
+  grid-area: about;
+}
+.contant p {
+  font-size: 20px;
+  color: black;
+}
+/**media query**/
+@media screen and (min-width: 768px) {
+  main {
+    background-image: url(img/stadium1-700x420-90.jpg);
+  }
+  .text-background {
+    background-image: url(img/footballlegends-700x490-70.jpg);
+    height: 125vh;
+  }
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "messi lew" "mbappe msalah" "neymar cronaldo" "rues mane";
+  }
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tel epost" "address about";
+  }
+  header p {
+    margin: 5px auto 0;
+    padding: 0;
+    width: 600px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 435px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .main-nav li {
+    margin: 0;
+  }
+  .main-nav li a {
+    padding: 20px;
+  }
+  .nav-links {
+    margin-left: 40px;
+  }
+  .logo {
+    margin-top: 0;
+    padding: 15px;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    background-image: url(img/stadium1-1000x600-90.jpg);
+  }
+  .text-background {
+    background-image: url(img/footballlegends-1000x700-70.jpg);
+  }
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "messi lew mbappe" "msalah neymar cronaldo" "rues mane .";
+  }
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tel epost" "address about";
+  }
+  h1 {
+    margin-top: 25px;
+  }
+  header p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .text-background {
+    margin-top: -180px;
+  }
+  .swiper-container {
+    margin-top: -150px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  main {
+    background-image: url(img/stadium1.jpg);
+  }
+  .text-background {
+    background-image: url(img/footballlegends.jpg);
+  }
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "messi lew mbappe msalah" "neymar cronaldo rues mane";
+  }
+  .contact {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "tel epost address about";
+  }
+  .swiper-container {
+    margin-top: -300px;
+  }
+}
